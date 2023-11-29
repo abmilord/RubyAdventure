@@ -38,7 +38,6 @@ public class RubyController : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        
         currentHealth = maxHealth;
 
         audioSource = GetComponent<AudioSource>();
@@ -98,6 +97,7 @@ public class RubyController : MonoBehaviour
 
         rigidbody2d.MovePosition(position);
     }
+    
 
     public void ChangeHealth(int amount)
     {
@@ -138,9 +138,20 @@ public class RubyController : MonoBehaviour
 
         PlaySound(throwSound);
     }
-
+    
     public void PlaySound(AudioClip clip)
     {
         audioSource.PlayOneShot(clip);
     }
+
+
+
+
+    
+
+
+
+
+
 }
+
