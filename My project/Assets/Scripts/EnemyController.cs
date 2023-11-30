@@ -12,6 +12,9 @@ public class EnemyController : MonoBehaviour
     float timer;
     int direction = 1;
 
+    bool broken = true;
+    Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -57,4 +60,12 @@ public class EnemyController : MonoBehaviour
             player.ChangeHealth(-1);
         }
     } 
+
+    public void Fix()
+    {
+        broken = false;
+        rigidbody2D.simulated = false;
+        //optional if you added the fixed animation
+        animator.SetTrigger("Fixed");
+    }
 }
