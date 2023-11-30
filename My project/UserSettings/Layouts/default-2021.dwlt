@@ -15,6 +15,7 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 7.3333335
     y: 50
     width: 1265.3334
@@ -28,6 +29,13 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
+=======
+    x: 0
+    y: 43
+    width: 1920
+    height: 997
+  m_ShowMode: 4
+>>>>>>> parent of b3f0374 (minor changes)
   m_Title: Game
   m_RootView: {fileID: 2}
 >>>>>>> parent of b3f0374 (minor changes)
@@ -160,8 +168,13 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1265.3334
     height: 615.3333
+=======
+    width: 1920
+    height: 997
+>>>>>>> parent of b3f0374 (minor changes)
 =======
     width: 1920
     height: 997
@@ -190,7 +203,11 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1265.3334
+=======
+    width: 1920
+>>>>>>> parent of b3f0374 (minor changes)
 =======
     width: 1920
 >>>>>>> parent of b3f0374 (minor changes)
@@ -215,12 +232,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 595.3333
     width: 1265.3334
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
 =======
+=======
+>>>>>>> parent of b3f0374 (minor changes)
     y: 977
     width: 1920
     height: 20
@@ -346,6 +366,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
     y: 0
     width: 1001.3333
@@ -357,6 +378,10 @@ MonoBehaviour:
 =======
     x: 459
     y: 0
+=======
+    x: 459
+    y: 0
+>>>>>>> parent of b3f0374 (minor changes)
     width: 1150
     height: 568
   m_MinSize: {x: 202, y: 221}
@@ -387,6 +412,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 0
     width: 1001.3333
     height: 384
@@ -395,6 +421,8 @@ MonoBehaviour:
   vertical: 0
   controlID: 94
 =======
+=======
+>>>>>>> parent of b3f0374 (minor changes)
     y: 568
     width: 1609
     height: 379
@@ -424,6 +452,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 286.66666
     y: 0
     width: 714.6666
@@ -434,6 +463,10 @@ MonoBehaviour:
 =======
     x: 1609
     y: 0
+=======
+    x: 1609
+    y: 0
+>>>>>>> parent of b3f0374 (minor changes)
     width: 311
     height: 947
   m_MinSize: {x: 275, y: 50}
@@ -739,15 +772,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 294
     y: 80
     width: 712.6666
     height: 363
 =======
+=======
+>>>>>>> parent of b3f0374 (minor changes)
     x: 459
     y: 73
     width: 1148
     height: 547
+<<<<<<< HEAD
+>>>>>>> parent of b3f0374 (minor changes)
+=======
 >>>>>>> parent of b3f0374 (minor changes)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1007,9 +1046,15 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 356.3333, y: 171, z: 0}
     speed: 2
     m_Value: {x: 356.33328, y: 170.99998, z: -0.00000008443015}
+=======
+    m_Target: {x: -2.1147385, y: -2.5783741, z: -0.20631972}
+    speed: 2
+    m_Value: {x: -2.1147385, y: -2.5783741, z: -0.20631972}
+>>>>>>> parent of b3f0374 (minor changes)
 =======
     m_Target: {x: -2.1147385, y: -2.5783741, z: -0.20631972}
     speed: 2
@@ -1066,9 +1111,15 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 395.23972
     speed: 2
     m_Value: 395.23972
+=======
+    m_Target: 5.263789
+    speed: 2
+    m_Value: 5.263789
+>>>>>>> parent of b3f0374 (minor changes)
 =======
     m_Target: 5.263789
     speed: 2
@@ -1181,15 +1232,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 294
     y: 80
     width: 712.6666
     height: 363
 =======
+=======
+>>>>>>> parent of b3f0374 (minor changes)
     x: 459
     y: 73
     width: 1148
     height: 547
+<<<<<<< HEAD
+>>>>>>> parent of b3f0374 (minor changes)
+=======
 >>>>>>> parent of b3f0374 (minor changes)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1203,7 +1260,11 @@ MonoBehaviour:
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_TargetSize: {x: 712.6666, y: 342}
+=======
+  m_TargetSize: {x: 1148, y: 526}
+>>>>>>> parent of b3f0374 (minor changes)
 =======
   m_TargetSize: {x: 1148, y: 526}
 >>>>>>> parent of b3f0374 (minor changes)
@@ -1222,15 +1283,21 @@ MonoBehaviour:
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_HBaseRangeMin: -237.55554
     m_HBaseRangeMax: 237.55554
     m_VBaseRangeMin: -114
     m_VBaseRangeMax: 114
 =======
+=======
+>>>>>>> parent of b3f0374 (minor changes)
     m_HBaseRangeMin: -574
     m_HBaseRangeMax: 574
     m_VBaseRangeMin: -263
     m_VBaseRangeMax: 263
+<<<<<<< HEAD
+>>>>>>> parent of b3f0374 (minor changes)
+=======
 >>>>>>> parent of b3f0374 (minor changes)
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
@@ -1250,15 +1317,21 @@ MonoBehaviour:
       x: 0
       y: 21
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 712.6666
       height: 342
     m_Scale: {x: 1.5, y: 1.5}
     m_Translation: {x: 356.3333, y: 171}
 =======
+=======
+>>>>>>> parent of b3f0374 (minor changes)
       width: 1148
       height: 526
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 574, y: 263}
+<<<<<<< HEAD
+>>>>>>> parent of b3f0374 (minor changes)
+=======
 >>>>>>> parent of b3f0374 (minor changes)
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -1267,6 +1340,7 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
       x: -237.55554
       y: -114
       width: 475.11108
@@ -1274,6 +1348,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1069, y: 544.5}
+=======
+      x: -574
+      y: -263
+      width: 1148
+      height: 526
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1148, y: 547}
+>>>>>>> parent of b3f0374 (minor changes)
 =======
       x: -574
       y: -263
