@@ -69,7 +69,15 @@ public class EnemyController : MonoBehaviour
 
         rigidbody2D.MovePosition(position);
     }
-
+    void SetCountText() 
+   {
+       CountText.text =  "Fixed Robots: " + count.ToString();
+       if (count >=1)
+       {
+        WinTextObject.SetActive(true);
+       }
+   }
+    
     void OnCollisionEnter2D(Collision2D other)
     {
         RubyController player = other.gameObject.GetComponent<RubyController>();

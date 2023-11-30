@@ -32,6 +32,10 @@ public class RubyController : MonoBehaviour
     public AudioClip throwSound;
     public AudioClip hitSound; 
 
+    public GameManagerScript gameManager;
+    private bool isDead;
+    public GameObject loseTextObject;
+
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +44,7 @@ public class RubyController : MonoBehaviour
         animator = GetComponent<Animator>();
         
         currentHealth = maxHealth;
+        loseTextObject.SetActive(false);
 
         audioSource = GetComponent<AudioSource>();
     }
@@ -126,6 +131,14 @@ public class RubyController : MonoBehaviour
         
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
+
+        if(health <=0 && !isDead)
+        {
+            isDead = true;
+            gameManager.gameOver();
+            speed = 0.0f;
+            loseTextObject.SetActive(true);
+        }
     }
 
     void Launch()
