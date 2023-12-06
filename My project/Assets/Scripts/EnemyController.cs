@@ -2,20 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using TMPro;
-
-
 
 public class EnemyController : MonoBehaviour
 {
     public float speed;
-    public TextMeshProUGUI CountText;
-    public GameObject WinTextObject;
     public bool vertical;
     public float changeTime = 3.0f;
 
     Rigidbody2D rigidbody2D;
-    private int count; 
     float timer;
     int direction = 1;
 
@@ -29,11 +23,6 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
-        count = 0;
-        SetCountText();
-        WinTextObject.SetActive(false);
-
-
         timer = changeTime;
 
         animator = GetComponent<Animator>();
@@ -56,7 +45,6 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-
     void FixedUpdate()
     {
         if(!broken)
@@ -65,6 +53,7 @@ public class EnemyController : MonoBehaviour
         }
         
         Vector2 position = rigidbody2D.position;
+        
 
         if(vertical)
         {
@@ -80,23 +69,19 @@ public class EnemyController : MonoBehaviour
         }
 
         rigidbody2D.MovePosition(position);
-        
-        
     }
     void SetCountText() 
    {
        CountText.text =  "Fixed Robots: " + count.ToString();
-       if (count >=3)
+       if (count >=1)
        {
         WinTextObject.SetActive(true);
-        
        }
    }
     
     void OnCollisionEnter2D(Collision2D other)
     {
         RubyController player = other.gameObject.GetComponent<RubyController>();
-        
 
         if(player != null)
         {
@@ -108,14 +93,20 @@ public class EnemyController : MonoBehaviour
     {
         broken = false;
         rigidbody2D.simulated = false;
+<<<<<<< Updated upstream
+
         animator.SetTrigger("Fixed");
 
+=======
         count = count + 1;
 
         SetCountText();
+        animator.SetTrigger("Fixed");
 
+        
+
+>>>>>>> Stashed changes
         smokeEffect.Stop();
-    }
 
+    }
 }
-    
