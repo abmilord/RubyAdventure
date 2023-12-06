@@ -108,6 +108,7 @@ MonoBehaviour:
   projectilePrefab2: {fileID: 1554507055320395755, guid: 3bc6762e551aeae47968764ceb4c697d, type: 3}
   healthPickup: {fileID: 1735637571751106205, guid: 5482c1640b6bf4d40b9da5828f5805b7, type: 3}
   hitEffect: {fileID: 3755461840960832630, guid: ec687692deb98984eaf9e06399045163, type: 3}
+  cogEffect: {fileID: 7429403661466095338, guid: e5beb038d86e8dd41957050d93198ea0, type: 3}
   throwSound: {fileID: 8300000, guid: b2edfd40873655249ba0e01a5cf705be, type: 3}
   hitSound: {fileID: 8300000, guid: 9b1bb1f450b7d444fa4a8019d13519a7, type: 3}
   isDead: 0

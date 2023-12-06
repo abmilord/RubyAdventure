@@ -28,6 +28,7 @@ public class RubyController : MonoBehaviour
 
     public ParticleSystem healthPickup;
     public ParticleSystem hitEffect;
+    public ParticleSystem cogEffect;
 
     AudioSource audioSource;
     public AudioClip throwSound;
@@ -75,11 +76,6 @@ public class RubyController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.C))
         {
             Launch();
-        }
-
-        if(Input.GetKeyDown(KeyCode.V))
-        {
-            Launch2();
         }
 
         if(Input.GetKeyDown(KeyCode.X))
@@ -171,6 +167,13 @@ public class RubyController : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+    }
+
+    public void CogCollectible()
+    {
+        
+        ParticleSystem cogPickup = Instantiate(cogEffect, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
+        cogPickup.Play();
     }
 
 
