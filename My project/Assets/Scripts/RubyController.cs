@@ -165,6 +165,14 @@ public class RubyController : MonoBehaviour
         audioSource.PlayOneShot(clip);
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Coins"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
 
 
 
