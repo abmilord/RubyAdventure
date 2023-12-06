@@ -71,6 +71,8 @@ public class RubyController : MonoBehaviour
             }
         }
 
+    
+
         if(Input.GetKeyDown(KeyCode.C))
         {
             Launch();
@@ -103,7 +105,16 @@ public class RubyController : MonoBehaviour
 
         rigidbody2d.MovePosition(position);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            Destroy(other.gameObject);
+        }
     
+    }
 
     public void ChangeHealth(int amount)
     {
