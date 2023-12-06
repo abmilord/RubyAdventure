@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 
@@ -9,7 +10,7 @@ using TMPro;
 public class EnemyController : MonoBehaviour
 {
     public float speed;
-    public TextMeshProUGUI CountText;
+    public Text CountText;
     public GameObject WinTextObject;
     public bool vertical;
     public float changeTime = 3.0f;
@@ -85,8 +86,8 @@ public class EnemyController : MonoBehaviour
     }
     void SetCountText() 
    {
-       CountText.text =  "Fixed Robots: " + count.ToString();
-       if (count >=3)
+       CountText.text =  "Fixed Robots: " + count.ToString("F0");
+       if (count >=1)
        {
         WinTextObject.SetActive(true);
         

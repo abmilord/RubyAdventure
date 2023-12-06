@@ -30,8 +30,8 @@ public class RubyController : MonoBehaviour
 
     AudioSource audioSource;
     public AudioClip throwSound;
-    public AudioClip hitSound; 
-
+    public AudioClip hitSound;
+    public bool isDead;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +39,7 @@ public class RubyController : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
+        isDead = false;
 
         audioSource = GetComponent<AudioSource>();
     }
@@ -123,9 +124,12 @@ public class RubyController : MonoBehaviour
             ParticleSystem Heal = Instantiate(healthPickup, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
             Heal.Play();
         }
-        
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
+        if(health <= 0)
+        {
+            isDead = true;
+        }
     }
 
     void Launch()
