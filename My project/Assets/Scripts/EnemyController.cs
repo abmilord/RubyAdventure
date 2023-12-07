@@ -11,29 +11,24 @@ public class EnemyController : MonoBehaviour
 {
     public float speed;
     public Text CountText;
-    public GameObject WinTextObject;
     public bool vertical;
     public float changeTime = 3.0f;
 
     Rigidbody2D rigidbody2D;
-    private int count; 
+    int count; 
     float timer;
     int direction = 1;
-
     Animator animator;
-
     bool broken = true;
-
     public ParticleSystem smokeEffect;
+    public bool fixingDone;
+    public int fixValue = 1;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
-        count = 0;
-        SetCountText();
-        WinTextObject.SetActive(false);
-
+        fixingDone = false;
 
         timer = changeTime;
 
@@ -84,13 +79,13 @@ public class EnemyController : MonoBehaviour
         
         
     }
-    void SetCountText() 
+    public void SetCountText(int fixValue) 
    {
-       CountText.text =  "Fixed Robots: " + count.ToString("F0");
+       count += fixValue;
+       CountText.text = "Fixed Robots: "+count.ToString();
        if (count >=1)
        {
-        WinTextObject.SetActive(true);
-        
+            fixingDone = true;
        }
    }
     
@@ -110,11 +105,7 @@ public class EnemyController : MonoBehaviour
         broken = false;
         rigidbody2D.simulated = false;
         animator.SetTrigger("Fixed");
-
-        count = count + 1;
-
-        SetCountText();
-
+        SetCountText(fixValue);
         smokeEffect.Stop();
     }
 

@@ -21,7 +21,7 @@ public class timeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timer > 60)
+        if(timer > timeToRestart)
         {
             Ruby.isDead = true;
             TimerToggle.isOn = false;

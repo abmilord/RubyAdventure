@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//whole script by Abiola
 public class PoisonHealth : MonoBehaviour
 {
      public AudioClip collectedClip;

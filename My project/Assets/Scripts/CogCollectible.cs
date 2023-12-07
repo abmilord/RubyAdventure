@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//whole script by Abiola
 public class CogCollectible : MonoBehaviour
 {
     public float duration = 3.0f;
@@ -34,7 +34,7 @@ public class CogCollectible : MonoBehaviour
 
         ActivatePower(controller);
 
-        yield return new WaitForSeconds(duration);
+        yield return new WaitForSeconds(10);
 
         DeactivatePower(controller);
 

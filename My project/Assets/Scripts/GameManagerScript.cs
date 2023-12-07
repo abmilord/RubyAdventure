@@ -14,6 +14,11 @@ public class GameManagerScript : MonoBehaviour
     public Button Restart;
     public GameObject WinText;
     public GameObject LoseText;
+    public ScoreManger Score;
+    public EnemyController Enemy;
+    AudioSource audioSource;
+    public AudioClip winSound;
+    public AudioClip loseSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +33,16 @@ public class GameManagerScript : MonoBehaviour
             gameOver();
             LoseText.SetActive(true);
             Rubysprite.color = Color.red;
+            
+            PlaySound(loseSound);
+        }
+        if(Enemy.fixingDone && Score.coinsDone)
+        {
+            gameOver();
+            WinText.SetActive(true);
+            Rubysprite.color = Color.green;
+
+            PlaySound(winSound);
         }
     }
 
@@ -39,5 +54,10 @@ public class GameManagerScript : MonoBehaviour
     public void restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 }

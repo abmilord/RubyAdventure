@@ -34,7 +34,7 @@ public class RubyController : MonoBehaviour
     public AudioClip throwSound;
     public AudioClip hitSound;
     public AudioClip poisonedSound;
-
+//isDead by Sheikh
     public bool isDead;
 
     // Start is called before the first frame update
@@ -132,6 +132,7 @@ public class RubyController : MonoBehaviour
         }
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
+//isDead by Sheikh        
         if(health <= 0)
         {
             isDead = true;
@@ -148,7 +149,7 @@ public class RubyController : MonoBehaviour
 
         PlaySound(throwSound);
     }
-
+//Launch2 by Abiola
     void Launch2()
     {
         GameObject projectileObject2 = Instantiate(projectilePrefab2, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
@@ -164,7 +165,7 @@ public class RubyController : MonoBehaviour
     {
         audioSource.PlayOneShot(clip);
     }
-
+//Coins by Jacob
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Coins"))
@@ -172,13 +173,13 @@ public class RubyController : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
-
+//CogCollectible by Abiola
     public void CogCollectible()
     {
         ParticleSystem cogPickup = Instantiate(cogEffect, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
         cogPickup.Play();
     }
-
+//Poisoned by Abiola
     public void Poisoned(int amount)
     {
          if(amount < 0)

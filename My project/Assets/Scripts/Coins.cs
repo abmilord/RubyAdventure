@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//whole script by Jacob Lermond
 public class Coins : MonoBehaviour
 {
     public int coinValue = 1;
