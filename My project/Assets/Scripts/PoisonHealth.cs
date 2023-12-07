@@ -13,10 +13,10 @@ public class PoisonHealth : MonoBehaviour
     if(controller != null)
     {
         
-        controller.ChangeHealth(-3);
-        Destroy(gameObject);
+      controller.Poisoned(-3);
+      Destroy(gameObject);
 
-        controller.PlaySound(collectedClip);
+      controller.PlaySound(collectedClip);
     
         
     }

@@ -7,6 +7,9 @@ public class CogCollectible : MonoBehaviour
     public float duration = 3.0f;
 
     private Collider2D _collider;
+
+    public AudioClip collectedClip;
+
     private void Awake()
     {
         _collider = GetComponent<Collider2D>();
@@ -19,6 +22,8 @@ public class CogCollectible : MonoBehaviour
         if(controller != null)
         {
             StartCoroutine(Pickup(controller));
+            
+            controller.PlaySound(collectedClip);
         }
     }
 

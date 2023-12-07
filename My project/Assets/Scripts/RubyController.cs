@@ -33,6 +33,8 @@ public class RubyController : MonoBehaviour
     AudioSource audioSource;
     public AudioClip throwSound;
     public AudioClip hitSound;
+    public AudioClip poisonedSound;
+
     public bool isDead;
 
     // Start is called before the first frame update
@@ -118,6 +120,8 @@ public class RubyController : MonoBehaviour
             ParticleSystem Damage = Instantiate(hitEffect, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
             Damage.Play();
 
+            
+
             PlaySound(hitSound);
         }
 
@@ -171,12 +175,31 @@ public class RubyController : MonoBehaviour
 
     public void CogCollectible()
     {
-        
         ParticleSystem cogPickup = Instantiate(cogEffect, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
         cogPickup.Play();
     }
 
+    public void Poisoned(int amount)
+    {
+         if(amount < 0)
+        {
+            animator.SetTrigger("Hit");
 
+            if(isInvincible)
+            {
+                return;
+            }
+            isInvincible = true;
+            invincibleTimer = timeInvincible;
+
+            ParticleSystem Damage = Instantiate(hitEffect, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
+            Damage.Play();
+
+            PlaySound(poisonedSound);
+        }
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
+    }
 
 
     

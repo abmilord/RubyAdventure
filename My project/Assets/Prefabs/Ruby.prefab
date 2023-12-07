@@ -111,6 +111,7 @@ MonoBehaviour:
   cogEffect: {fileID: 7429403661466095338, guid: e5beb038d86e8dd41957050d93198ea0, type: 3}
   throwSound: {fileID: 8300000, guid: b2edfd40873655249ba0e01a5cf705be, type: 3}
   hitSound: {fileID: 8300000, guid: 9b1bb1f450b7d444fa4a8019d13519a7, type: 3}
+  poisonedSound: {fileID: 8300000, guid: e4e460d54c6e160458b5aa3dfc52062c, type: 3}
   isDead: 0
 --- !u!50 &2247757626808734350
 Rigidbody2D:
